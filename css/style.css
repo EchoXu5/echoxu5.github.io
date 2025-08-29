@@ -446,3 +446,7 @@
 .footer .copyright a:hover {
     color: var(--primary);
 }
+
+/* 允许换行，并控制行高 */
+.navbar-brand { white-space: normal !important; }
+.navbar-brand h1 { line-height: 1; margin: 0; }
