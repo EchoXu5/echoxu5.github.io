@@ -29,6 +29,20 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        .navbar .navbar-brand .brand-top { 
+          font-size: 1.5rem !important; 
+          line-height: 1 !important; 
+        }
+        .navbar .navbar-brand .brand-bottom { 
+          font-size: 2rem !important; 
+          line-height: 1 !important; 
+        }
+        .navbar .navbar-brand { 
+          white-space: normal !important; 
+          text-align: center; 
+        }
+      </style>
 </head>
 
 <body>
@@ -58,18 +72,13 @@
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
             <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
 <!--                 <h1 class="fw-bold text-primary m-0">FusionSTEM <span class="text-white">Foundation</span></h1> -->
-                <a href="index.html"
-                   class="navbar-brand py-0"
-                   style="white-space: normal !important; line-height: 1; text-align:center;">
-                  <span class="d-block fw-bold text-primary"
-                        style="line-height:1; font-size: 1.5rem !important;">
-                    FusionSTEM
-                  </span>
-                  <span class="d-block text-white"
-                        style="line-height:1; font-size: 2rem !important;">
-                    Foundation
-                  </span>
-                </a>
+             <a href="index.html"
+               class="navbar-brand py-0">
+              <span class="brand-top d-block fw-bold text-primary">FusionSTEM</span>
+              <span class="brand-bottom d-block text-white">Foundation</span>
+             </a>
+
+
 <!--                 <h1 class="fw-bold text-primary m-0">Chari<span class="text-white">Team</span></h1> -->
             </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
