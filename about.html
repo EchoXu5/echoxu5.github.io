@@ -30,7 +30,30 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-
+<style>
+      /* 强制覆盖字号：上小下大，整体更接近等宽 */
+      #brand { font-size:0 !important; }            /* 清空父级字号，完全用子元素控制 */
+      #brand .brand-top { 
+        display:block; 
+        font-size:1.8rem !important; 
+        line-height:1 !important; 
+        font-weight: 800 !important;
+      }
+      #brand .brand-bottom { 
+        display:block; 
+        font-size:2rem !important; 
+        line-height:1 !important; 
+        letter-spacing:0.015em;
+        font-weight: 800 !important;
+      }
+      /* 保险：允许换行（覆盖 Bootstrap 可能的 nowrap） */
+      .navbar .navbar-brand { white-space:normal !important; }
+      /* 小屏再微调，避免挤压 */
+      @media (max-width: 992px){
+        #brand .brand-top { font-size:1.5rem !important; }
+        #brand .brand-bottom { font-size:1.8rem !important; }
+      }
+</style>
 <body>
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
