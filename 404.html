@@ -31,6 +31,31 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
+<style>
+      /* 强制覆盖字号：上小下大，整体更接近等宽 */
+      #brand { font-size:0 !important; }            /* 清空父级字号，完全用子元素控制 */
+      #brand .brand-top { 
+        display:block; 
+        font-size:1.8rem !important; 
+        line-height:1 !important; 
+        font-weight: 800 !important;
+      }
+      #brand .brand-bottom { 
+        display:block; 
+        font-size:2rem !important; 
+        line-height:1 !important; 
+        letter-spacing:0.015em;
+        font-weight: 800 !important;
+      }
+      /* 保险：允许换行（覆盖 Bootstrap 可能的 nowrap） */
+      .navbar .navbar-brand { white-space:normal !important; }
+      /* 小屏再微调，避免挤压 */
+      @media (max-width: 992px){
+        #brand .brand-top { font-size:1.5rem !important; }
+        #brand .brand-bottom { font-size:1.8rem !important; }
+      }
+</style>
+    
 <body>
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -43,8 +68,8 @@
     <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
             <div class="col-lg-6 px-5 text-start">
-                <small><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
-                <small class="ms-4"><i class="fa fa-envelope me-2"></i>info@example.com</small>
+                <small><i class="fa fa-map-marker-alt me-2"></i>Fremont, California, USA</small>
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>Fusionstemrobotic@gmail.com</small>
             </div>
             <div class="col-lg-6 px-5 text-end">
                 <small>Follow us:</small>
@@ -56,25 +81,27 @@
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-                <h1 class="fw-bold text-primary m-0">Chari<span class="text-white">Team</span></h1>
+            <a href="index.html" id="brand" class="navbar-brand ms-4 ms-lg-0 py-0"
+               style="white-space:normal!important; text-align:center; line-height:1;">
+              <span class="brand-top d-block fw-bold text-primary">FusionSTEM</span>
+              <span class="brand-bottom d-block fw-bold text-white">Foundation</span>
             </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
                     <a href="about.html" class="nav-item nav-link">About</a>
 <!--                     <a href="causes.html" class="nav-item nav-link">Causes</a> -->
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
-                            <a href="service.html" class="dropdown-item">Service</a>
+<!--                             <a href="service.html" class="dropdown-item">Service</a> -->
                             <a href="donate.html" class="dropdown-item">Donate</a>
                             <a href="team.html" class="dropdown-item">Our Team</a>
 <!--                             <a href="testimonial.html" class="dropdown-item">Testimonial</a> -->
-                            <a href="404.html" class="dropdown-item active">404 Page</a>
+                            <a href="404.html" class="dropdown-item">404 Page</a>
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
