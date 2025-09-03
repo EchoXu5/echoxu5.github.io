@@ -485,12 +485,12 @@
 }
 
 /* Container for the action buttons */
+
 .gallery-actions {
-  display: flex;              /* Use flexbox layout */
-  justify-content: center;    /* Center horizontally */
-  align-items: center;        /* Align vertically in the middle */
-  gap: 10px;                  /* Space between buttons */
-  margin-top: 20px;           /* Optional: add space above */
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%; /* make sure it spans the container */
 }
 
 
