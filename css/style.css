@@ -450,3 +450,55 @@
 /* 允许换行，并控制行高 */
 .navbar-brand { white-space: normal !important; }
 .navbar-brand h1 { line-height: 1; margin: 0; }
+
+
+/* =========================
+   FTC Team 30592 Gallery
+   ========================= */
+.gallery-wrap{
+  max-width: 1320px;          /* 控制整体宽度：更宽、更少左右空白 */
+  margin: 0 auto;             /* 居中 */
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.gallery-img{
+  width: 100%;
+  height: 360px;              /* 统一高度，视觉整齐 */
+  object-fit: cover;          /* 等比裁切，避免变形 */
+  border: 5px solid var(--primary); /* 橙色边框 */
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.gallery-img:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+/* 响应式高度适配 */
+@media (max-width: 992px){
+  .gallery-img{ height: 300px; }
+}
+@media (max-width: 576px){
+  .gallery-img{ height: 220px; }
+}
+
+/* 按钮区：左对齐并留间距 */
+.gallery-actions{
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  justify-content: flex-start;   /* 左侧对齐 */
+}
+
+/* 让主按钮为实心橙色、描边按钮为橙色边框 */
+.btn.btn-primary{
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.btn.btn-outline-primary{
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
