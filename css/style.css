@@ -484,13 +484,15 @@
   .gallery-img{ height: 220px; }
 }
 
-/* 按钮区：左对齐并留间距 */
-.gallery-actions{
-  display: flex;
-  gap: 16px;
-  margin-top: 16px;
-  justify-content: flex-start;   /* 左侧对齐 */
+/* Container for the action buttons */
+.gallery-actions {
+  display: flex;              /* Use flexbox layout */
+  justify-content: center;    /* Center horizontally */
+  align-items: center;        /* Align vertically in the middle */
+  gap: 10px;                  /* Space between buttons */
+  margin-top: 20px;           /* Optional: add space above */
 }
+
 
 /* 让主按钮为实心橙色、描边按钮为橙色边框 */
 .btn.btn-primary{
