@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>FusionSTEM Foundation</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="FusionSTEM Foundation, robotics, STEM education, FTC team, Fremont California" name="keywords">
+    <meta content="FusionSTEM Foundation - Inspiring youth to explore STEM through hands-on robotics learning and competition support" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -54,6 +54,21 @@
         #brand .brand-top { font-size:1.5rem !important; }
         #brand .brand-bottom { font-size:1.8rem !important; }
       }
+      
+      /* Smooth scrolling for anchor links */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Section spacing */
+      .page-section {
+        padding: 80px 0;
+      }
+      
+      /* Active navigation highlighting */
+      .nav-link.active {
+        color: var(--primary) !important;
+      }
 </style>
     
 <body>
@@ -81,7 +96,7 @@
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-            <a href="index.html" id="brand" class="navbar-brand ms-4 ms-lg-0 py-0"
+            <a href="#home" id="brand" class="navbar-brand ms-4 ms-lg-0 py-0"
                style="white-space:normal!important; text-align:center; line-height:1;">
               <span class="brand-top d-block fw-bold text-primary">FusionSTEM</span>
               <span class="brand-bottom d-block fw-bold text-white">Foundation</span>
@@ -91,23 +106,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-<!--                     <a href="causes.html" class="nav-item nav-link">Causes</a> -->
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu m-0">
-<!--                             <a href="service.html" class="dropdown-item">Service</a> -->
-                            <a href="donate.html" class="dropdown-item">Donate</a>
-                            <a href="team.html" class="dropdown-item">FTC Team 30592 </a>
-<!--                             <a href="testimonial.html" class="dropdown-item">Testimonial</a> -->
-<!--                             <a href="404.html" class="dropdown-item">404 Page</a> -->
-                        </div>
-                    </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="#home" class="nav-item nav-link active">Home</a>
+                    <a href="#about" class="nav-item nav-link">About</a>
+                    <a href="#services" class="nav-item nav-link">Services</a>
+                    <a href="#donate" class="nav-item nav-link">Donate</a>
+                    <a href="#contact" class="nav-item nav-link">Contact</a>
                 </div>
                 <div class="d-none d-lg-flex ms-2">
-                    <a class="btn btn-outline-primary py-2 px-3" href="">
+                    <a class="btn btn-outline-primary py-2 px-3" href="#donate">
                         Donate Now
                         <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                             <i class="fa fa-arrow-right"></i>
@@ -120,8 +126,8 @@
     <!-- Navbar End -->
 
 
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 mb-5">
+    <!-- Home Section - Carousel Start -->
+    <section id="home" class="container-fluid p-0 mb-5">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -132,7 +138,7 @@
                                 <div class="col-lg-7 pt-5">
                                     <h1 class="display-4 text-white mb-3 animated slideInDown">Inspire STEM Dreams</h1>
                                     <p class="fs-5 text-white-50 mb-5 animated slideInDown">Inspiring youth to explore STEM through hands-on robotics learning</p>
-                                    <a class="btn btn-primary py-2 px-3 animated slideInDown" href="">
+                                    <a class="btn btn-primary py-2 px-3 animated slideInDown" href="#about">
                                         Learn More
                                         <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                                             <i class="fa fa-arrow-right"></i>
@@ -151,7 +157,7 @@
                                 <div class="col-lg-7 pt-5">
                                     <h1 class="display-4 text-white mb-3 animated slideInDown">Empowering Young Innovators</h1>
                                     <p class="fs-5 text-white-50 mb-5 animated slideInDown">Empowering students to dream big and compete in global STEM challenges</p>
-                                    <a class="btn btn-primary py-2 px-3 animated slideInDown" href="">
+                                    <a class="btn btn-primary py-2 px-3 animated slideInDown" href="#services">
                                         Learn More
                                         <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                                             <i class="fa fa-arrow-right"></i>
@@ -174,12 +180,12 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </div>
-    <!-- Carousel End -->
+    </section>
+    <!-- Home Section - Carousel End -->
 
 
-    <!-- About Start -->
-    <div class="container-xxl py-5">
+    <!-- About Section Start -->
+    <section id="about" class="container-xxl page-section">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -194,151 +200,30 @@
                         <h1 class="display-6 mb-5">We Help Robotics Competition Teams And STEM Events</h1>
                         <div class="bg-light border-bottom border-5 border-primary rounded p-4 mb-4">
                             <p class="text-dark mb-2">Our mission is to inspire students through hands-on learning, supporting their growth in robotics and STEM education.</p>
-<!--                             <span class="text-primary">Jhon Doe, Founder</span> -->
                         </div>
                         <p class="mb-5">We provide resources such as equipment, workshops, and training sessions to help students build real-world skills in robotics and engineering. Through outreach events and partnerships with schools and community organizations, we bring STEM opportunities to a diverse range of students. By fostering teamwork, problem-solving, and innovation, we prepare students not only for competitions but also for future academic and career success.</p>
-                        <a class="btn btn-primary py-2 px-3 me-3" href="">
+                        <a class="btn btn-primary py-2 px-3 me-3" href="#services">
                             Learn More
                             <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                                 <i class="fa fa-arrow-right"></i>
                             </div>
                         </a>
-                        <a class="btn btn-outline-primary py-2 px-3" href="contact.html">
+                        <a class="btn btn-outline-primary py-2 px-3" href="#contact">
                             Contact Us
                             <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
                                 <i class="fa fa-arrow-right"></i>
                             </div>
                         </a>
-
-                        <!-- <a class="btn btn-outline-primary py-2 px-3" href="">
-                            Contact Us
-                            <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                <i class="fa fa-arrow-right"></i>
-                            </div>
-                        </a> -->
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- About End -->
+    </section>
+    <!-- About Section End -->
 
 
-    <!-- Causes Start -->
-<!--     <div class="container-xxl bg-light my-5 py-5">
-        <div class="container py-5">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Feature Causes</div>
-                <h1 class="display-6 mb-5">Every Child Deserves The Opportunity To Learn</h1>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="causes-item d-flex flex-column bg-white border-top border-5 border-primary rounded-top overflow-hidden h-100">
-                        <div class="text-center p-4 pt-0">
-                            <div class="d-inline-block bg-primary text-white rounded-bottom fs-5 pb-1 px-3 mb-4">
-                                <small>Education</small>
-                            </div>
-                            <h5 class="mb-3">Education For African Children</h5>
-                            <p>Tempor erat elitr rebum at clita dolor diam ipsum sit diam amet diam et eos</p>
-                            <div class="causes-progress bg-light p-3 pt-2">
-                                <div class="d-flex justify-content-between">
-                                    <p class="text-dark">$10,000 <small class="text-body">Goal</small></p>
-                                    <p class="text-dark">$9,542 <small class="text-body">Raised</small></p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                        <span>90%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="position-relative mt-auto">
-                            <img class="img-fluid" src="img/courses-1.jpg" alt="">
-                            <div class="causes-overlay">
-                                <a class="btn btn-outline-primary" href="">
-                                    Read More
-                                    <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                        <i class="fa fa-arrow-right"></i>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="causes-item d-flex flex-column bg-white border-top border-5 border-primary rounded-top overflow-hidden h-100">
-                        <div class="text-center p-4 pt-0">
-                            <div class="d-inline-block bg-primary text-white rounded-bottom fs-5 pb-1 px-3 mb-4">
-                                <small>Pure Water</small>
-                            </div>
-                            <h5 class="mb-3">Ensure Pure Drinking Water</h5>
-                            <p>Tempor erat elitr rebum at clita dolor diam ipsum sit diam amet diam et eos</p>
-                            <div class="causes-progress bg-light p-3 pt-2">
-                                <div class="d-flex justify-content-between">
-                                    <p class="text-dark">$10,000 <small class="text-body">Goal</small></p>
-                                    <p class="text-dark">$9,542 <small class="text-body">Raised</small></p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                        <span>90%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="position-relative mt-auto">
-                            <img class="img-fluid" src="img/courses-2.jpg" alt="">
-                            <div class="causes-overlay">
-                                <a class="btn btn-outline-primary" href="">
-                                    Read More
-                                    <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                        <i class="fa fa-arrow-right"></i>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="causes-item d-flex flex-column bg-white border-top border-5 border-primary rounded-top overflow-hidden h-100">
-                        <div class="text-center p-4 pt-0">
-                            <div class="d-inline-block bg-primary text-white rounded-bottom fs-5 pb-1 px-3 mb-4">
-                                <small>Healthy Life</small>
-                            </div>
-                            <h5 class="mb-3">Ensure Medical Treatment</h5>
-                            <p>Tempor erat elitr rebum at clita dolor diam ipsum sit diam amet diam et eos</p>
-                            <div class="causes-progress bg-light p-3 pt-2">
-                                <div class="d-flex justify-content-between">
-                                    <p class="text-dark">$10,000 <small class="text-body">Goal</small></p>
-                                    <p class="text-dark">$9,542 <small class="text-body">Raised</small></p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                        <span>90%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="position-relative mt-auto">
-                            <img class="img-fluid" src="img/courses-3.jpg" alt="">
-                            <div class="causes-overlay">
-                                <a class="btn btn-outline-primary" href="">
-                                    Read More
-                                    <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                        <i class="fa fa-arrow-right"></i>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Causes End -->
-
-
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
+    <!-- Services Section Start -->
+    <section id="services" class="container-xxl page-section">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">What We Do</div>
@@ -349,82 +234,287 @@
                     <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
                         <img class="img-fluid mb-4" src="img/icon-1.png" alt="">
                         <h4 class="mb-3">Robotics Competition Support</h4>
-                        <p class="mb-4">We provide mentoring, resources, and funding to help students succeed in robotics competitions like First Technical Challenge.</p>
-                        <a class="btn btn-outline-primary px-3" href="">
-                            Learn More
-                            <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                <i class="fa fa-arrow-right"></i>
+                        <p class="mb-4">We provide comprehensive support for robotics teams including mentoring, equipment, and competition funding. Our supported team, Little Potato Robotics (FTC Team #30592), has achieved remarkable success including #8 position in the 2025 Lobster competition and participation in VEX IQ World Championships with multiple regional awards.</p>
+                        <div class="mb-3">
+                            <small class="text-muted">
+                                <strong>Recent Achievements:</strong><br>
+                                • FTC Lobster Competition #8 Position<br>
+                                • VEX IQ World Championship Participation<br>
+                                • Multiple Regional Excellence Awards
+                            </small>
+                        </div>
+                        <div class="mb-4">
+                            <!-- 2025 Decode Session -->
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-3">
+                                    <a href="https://drive.google.com/drive/folders/1EDWhinDVB7leLaE_wlUYHFO6ItOn7SVZ?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                                        <img src="img/2025Decode.jpg" alt="2025 Decode Competition" class="img-fluid rounded shadow-sm" style="width: 100%; height: 120px; object-fit: cover;">
+                                    </a>
+                                </div>
+                                <div class="col-md-9">
+                                    <h6 class="mb-2 fw-bold">2025 Decode Competition</h6>
+                                    <p class="mb-2 text-muted small">Our latest FTC competition journey showcasing our team's growth and innovation in the DECODE season. Features our robot development, competition highlights, and team achievements.</p>
+                                    <a href="https://drive.google.com/drive/folders/1EDWhinDVB7leLaE_wlUYHFO6ItOn7SVZ?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+                                        <i class="fa fa-images me-1"></i> View Photos
+                                    </a>
+                                </div>
                             </div>
-                        </a>
+                            
+                            <!-- Rookie Bot Session -->
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-3">
+                                    <a href="https://drive.google.com/drive/folders/12P1NNnsp-TcijS2J8NiBLmlficlfgYPZ?usp=drive_link" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                                        <img src="img/2025RookieBot.jpg" alt="Rookie Bot Development" class="img-fluid rounded shadow-sm" style="width: 100%; height: 120px; object-fit: cover;">
+                                    </a>
+                                </div>
+                                <div class="col-md-9">
+                                    <h6 class="mb-2 fw-bold">Rookie Bot Development</h6>
+                                    <p class="mb-2 text-muted small">Our first FTC robot development journey from concept to completion. Documenting the learning process, design iterations, and the excitement of building our inaugural competition robot.</p>
+                                    <a href="https://drive.google.com/drive/folders/12P1NNnsp-TcijS2J8NiBLmlficlfgYPZ?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+                                        <i class="fa fa-images me-1"></i> View Photos
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- 2025 Lobster Session -->
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-3">
+                                    <a href="https://drive.google.com/drive/folders/1KEKBa14gkyhWty6D15mRaIQRpVEhu6W8?usp=drive_link" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                                        <img src="img/2025Lobster.jpg" alt="2025 Lobster Competition" class="img-fluid rounded shadow-sm" style="width: 100%; height: 120px; object-fit: cover;">
+                                    </a>
+                                </div>
+                                <div class="col-md-9">
+                                    <h6 class="mb-2 fw-bold">2025 Lobster Competition</h6>
+                                    <p class="mb-2 text-muted small">Robot building and testing sessions leading to our impressive #8 position finish. Captures the intensity of competition preparation, teamwork, and the thrill of competitive robotics.</p>
+                                    <a href="https://drive.google.com/drive/folders/1KEKBa14gkyhWty6D15mRaIQRpVEhu6W8?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+                                        <i class="fa fa-images me-1"></i> View Photos
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- VEX IQ Session -->
+                            <div class="row g-3">
+                                <div class="col-md-3">
+                                    <a href="https://drive.google.com/drive/folders/1SiOoHvv-A-T4vH8mNP9fzJ1JSM-gmwSR?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                                        <img src="img/VEXIQ.jpg" alt="VEX IQ World Championship" class="img-fluid rounded shadow-sm" style="width: 100%; height: 120px; object-fit: cover;">
+                                    </a>
+                                </div>
+                                <div class="col-md-9">
+                                    <h6 class="mb-2 fw-bold">VEX IQ World Championship</h6>
+                                    <p class="mb-2 text-muted small">Experience the World Championship journey with our team's participation in VEX IQ competitions. Features international competition highlights, team bonding, and the global robotics community.</p>
+                                    <a href="https://drive.google.com/drive/folders/1SiOoHvv-A-T4vH8mNP9fzJ1JSM-gmwSR?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+                                        <i class="fa fa-images me-1"></i> View Photos
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
                         <img class="img-fluid mb-4" src="img/icon-2.png" alt="">
                         <h4 class="mb-3">Community Contribution</h4>
-                        <p class="mb-4">From summer camps to library talks and team meetups, we bring STEM learning into the community and encourage collaboration between students and teams.</p>
-                        <a class="btn btn-outline-primary px-3" href="">
-                            Learn More
-                            <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                <i class="fa fa-arrow-right"></i>
+                        <p class="mb-4">We actively engage with the community through hands-on STEM education programs. Our initiatives include summer camps for younger students, FLL teaching sessions, and partnerships with libraries for robotics demonstrations.</p>
+                        <div class="mb-3">
+                            <small class="text-muted">
+                                <strong>Community Programs:</strong><br>
+                                • Summer STEM Camps for Kids<br>
+                                • FLL Teaching & Mentoring<br>
+                                • Library Robotics Demos<br>
+                                • Special Needs STEM Support
+                            </small>
+                        </div>
+                        <div class="mb-4">
+                            <!-- Summer Camp Session -->
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-3">
+                                    <a href="https://drive.google.com/drive/folders/1N5YBvykKlmbcCv2aSQMz43TyAMrQYjtZ?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                                        <img src="img/2025SummerCamp.jpg" alt="Summer STEM Camp" class="img-fluid rounded shadow-sm" style="width: 100%; height: 120px; object-fit: cover;">
+                                    </a>
+                                </div>
+                                <div class="col-md-9">
+                                    <h6 class="mb-2 fw-bold">Summer STEM Camp</h6>
+                                    <p class="mb-2 text-muted small">Teaching kids about STEM and robotics through hands-on activities and interactive learning. Our summer camp program introduces young minds to the exciting world of science, technology, engineering, and mathematics.</p>
+                                    <a href="https://drive.google.com/drive/folders/1N5YBvykKlmbcCv2aSQMz43TyAMrQYjtZ?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+                                        <i class="fa fa-images me-1"></i> View Photos
+                                    </a>
+                                </div>
                             </div>
-                        </a>
+                            
+                            <!-- FLL Teaching Session -->
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-3">
+                                    <a href="https://drive.google.com/drive/folders/1T8rUku70bne2jxnN-i5vzUUiFGWn_ZIt?usp=drive_link" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                                        <img src="img/2025FLLTeach.jpg" alt="FLL Teaching Session" class="img-fluid rounded shadow-sm" style="width: 100%; height: 120px; object-fit: cover;">
+                                    </a>
+                                </div>
+                                <div class="col-md-9">
+                                    <h6 class="mb-2 fw-bold">FLL Teaching & Mentoring</h6>
+                                    <p class="mb-2 text-muted small">Teaching and having fun with FLL (First Lego League) teams. We mentor younger students in robotics, programming, and teamwork, sharing our knowledge and passion for competitive robotics.</p>
+                                    <a href="https://drive.google.com/drive/folders/1T8rUku70bne2jxnN-i5vzUUiFGWn_ZIt?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+                                        <i class="fa fa-images me-1"></i> View Photos
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Team Building Session -->
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-3">
+                                    <a href="https://drive.google.com/drive/folders/1q4IWv6CanTEVU0uDe6b9h1c62IFni3_k?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                                        <img src="img/2025AugTeambuild.jpg" alt="Team Building Activities" class="img-fluid rounded shadow-sm" style="width: 100%; height: 120px; object-fit: cover;">
+                                    </a>
+                                </div>
+                                <div class="col-md-9">
+                                    <h6 class="mb-2 fw-bold">Team Building & Pool Party</h6>
+                                    <p class="mb-2 text-muted small">Team building activities and pool party fun! Building strong relationships and teamwork skills through recreational activities, fostering collaboration and friendship within our robotics community.</p>
+                                    <a href="https://drive.google.com/drive/folders/1q4IWv6CanTEVU0uDe6b9h1c62IFni3_k?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+                                        <i class="fa fa-images me-1"></i> View Photos
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Library Demos Session -->
+                            <div class="row g-3">
+                                <div class="col-md-3">
+                                    <a href="https://drive.google.com/drive/folders/1q4IWv6CanTEVU0uDe6b9h1c62IFni3_k?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                                        <img src="img/2025Library.jpg" alt="Library Robotics Demos" class="img-fluid rounded shadow-sm" style="width: 100%; height: 120px; object-fit: cover;">
+                                    </a>
+                                </div>
+                                <div class="col-md-9">
+                                    <h6 class="mb-2 fw-bold">Library Robotics Demonstrations</h6>
+                                    <p class="mb-2 text-muted small">Community robotics demonstrations at local libraries. We showcase our robots and share the excitement of robotics with the broader community, inspiring the next generation of engineers and innovators.</p>
+                                    <a href="https://drive.google.com/drive/folders/1q4IWv6CanTEVU0uDe6b9h1c62IFni3_k?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+                                        <i class="fa fa-images me-1"></i> View Photos
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
                         <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
                         <h4 class="mb-3">Career Exploration</h4>
-                        <p class="mb-4">Helping students discover future possibilities by connecting them with university researchers, industry professionals, and hands-on field trips to labs and companies.</p>
-                        <a class="btn  btn-outline-primary px-3" href="">
-                            Learn More
-                            <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                <i class="fa fa-arrow-right"></i>
+                        <p class="mb-4">We connect students with real-world opportunities through university partnerships and industry visits. Our programs include field trips to San Jose State University robotics labs and Unitree robotics company, providing hands-on exposure to cutting-edge technology and career paths.</p>
+                        <div class="mb-3">
+                            <small class="text-muted">
+                                <strong>Industry Partnerships:</strong><br>
+                                • SJSU Robotics Lab Visits<br>
+                                • Unitree Robotics Company Tours<br>
+                                • University Researcher Connections<br>
+                                • Professional Mentorship Programs
+                            </small>
+                        </div>
+                        <div class="mb-4">
+                            <!-- SJSU Visit Session -->
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-3">
+                                    <a href="https://drive.google.com/drive/folders/1skGTIYvxLTUXeuU0LgesAAjhatn8vQCb?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                                        <img src="img/2025SJSU.jpg" alt="SJSU Robotics Lab Visit" class="img-fluid rounded shadow-sm" style="width: 100%; height: 120px; object-fit: cover;">
+                                    </a>
+                                </div>
+                                <div class="col-md-9">
+                                    <h6 class="mb-2 fw-bold">SJSU Robotics Lab Visit</h6>
+                                    <p class="mb-2 text-muted small">Visit SJSU Robotic Labs and learn from experts in the field. Our students get hands-on experience with cutting-edge robotics technology and connect with university researchers and professors.</p>
+                                    <a href="https://drive.google.com/drive/folders/1skGTIYvxLTUXeuU0LgesAAjhatn8vQCb?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+                                        <i class="fa fa-images me-1"></i> View Photos
+                                    </a>
+                                </div>
                             </div>
-                        </a>
+                            
+                            <!-- Unitree Tour Session -->
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-3">
+                                    <a href="https://drive.google.com/drive/folders/1bZlVOgJjesbISaMpksPidV-p8VVGHWIz?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                                        <img src="img/2025Unitree.jpg" alt="Unitree Robotics Company Tour" class="img-fluid rounded shadow-sm" style="width: 100%; height: 120px; object-fit: cover;">
+                                    </a>
+                                </div>
+                                <div class="col-md-9">
+                                    <h6 class="mb-2 fw-bold">Unitree Robotics Company Tour</h6>
+                                    <p class="mb-2 text-muted small">Visit Unitree and learn from industry experts in robotics manufacturing. Students explore real-world applications of robotics technology and gain insights into career opportunities in the robotics industry.</p>
+                                    <a href="https://drive.google.com/drive/folders/1bZlVOgJjesbISaMpksPidV-p8VVGHWIz?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+                                        <i class="fa fa-images me-1"></i> View Photos
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Mentorship Session -->
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-3">
+                                    <a href="https://drive.google.com/drive/folders/1skGTIYvxLTUXeuU0LgesAAjhatn8vQCb?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                                        <img src="img/2025SJSU.jpg" alt="Professional Mentorship" class="img-fluid rounded shadow-sm" style="width: 100%; height: 120px; object-fit: cover;">
+                                    </a>
+                                </div>
+                                <div class="col-md-9">
+                                    <h6 class="mb-2 fw-bold">Professional Mentorship Programs</h6>
+                                    <p class="mb-2 text-muted small">Connecting students with industry professionals and university researchers for mentorship opportunities. Building relationships that guide career development and provide real-world insights into STEM fields.</p>
+                                    <a href="https://drive.google.com/drive/folders/1skGTIYvxLTUXeuU0LgesAAjhatn8vQCb?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+                                        <i class="fa fa-images me-1"></i> View Photos
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Research Session -->
+                            <div class="row g-3">
+                                <div class="col-md-3">
+                                    <a href="https://drive.google.com/drive/folders/1bZlVOgJjesbISaMpksPidV-p8VVGHWIz?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                                        <img src="img/2025Unitree.jpg" alt="University Research Connections" class="img-fluid rounded shadow-sm" style="width: 100%; height: 120px; object-fit: cover;">
+                                    </a>
+                                </div>
+                                <div class="col-md-9">
+                                    <h6 class="mb-2 fw-bold">University Research Connections</h6>
+                                    <p class="mb-2 text-muted small">Exploring cutting-edge research projects and connecting with university research teams. Students gain exposure to advanced robotics research and potential collaboration opportunities in academic settings.</p>
+                                    <a href="https://drive.google.com/drive/folders/1bZlVOgJjesbISaMpksPidV-p8VVGHWIz?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+                                        <i class="fa fa-images me-1"></i> View Photos
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Service End -->
+    </section>
+    <!-- Services Section End -->
 
 
-    <!-- Donate Start -->
-<!--     <div class="container-fluid donate my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.jpg">
+    <!-- Donate Section Start -->
+    <section id="donate" class="container-fluid donate my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.jpg">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Donate Now</div>
-                    <h1 class="display-6 text-white mb-5">Thanks For The Results Achieved With You</h1>
-                    <p class="text-white-50 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <h1 class="display-6 text-white mb-5">Support STEM Education and Robotics</h1>
+                    <p class="text-white-50 mb-0">Your donation helps us provide equipment, workshops, and opportunities for students to explore robotics and STEM fields. Every contribution makes a difference in inspiring the next generation of innovators.</p>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <div class="h-100 bg-white p-5">
+                        <h4 class="mb-4">Make a Donation</h4>
+                        <p class="mb-4">Choose an amount or enter a custom donation to support our mission.</p>
                         <form>
                             <div class="row g-3">
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control bg-light border-0" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
+                                        <input type="text" class="form-control bg-light border-0" id="donor_name" placeholder="Your Name">
+                                        <label for="donor_name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control bg-light border-0" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
+                                        <input type="email" class="form-control bg-light border-0" id="donor_email" placeholder="Your Email">
+                                        <label for="donor_email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="btn-group d-flex justify-content-around">
                                         <input type="radio" class="btn-check" name="btnradio" id="btnradio1" checked>
-                                        <label class="btn btn-light py-3" for="btnradio1">$10</label>
+                                        <label class="btn btn-light py-3" for="btnradio1">$25</label>
 
                                         <input type="radio" class="btn-check" name="btnradio" id="btnradio2">
-                                        <label class="btn btn-light py-3" for="btnradio2">$20</label>
+                                        <label class="btn btn-light py-3" for="btnradio2">$50</label>
 
                                         <input type="radio" class="btn-check" name="btnradio" id="btnradio3">
-                                        <label class="btn btn-light py-3" for="btnradio3">$30</label>
+                                        <label class="btn btn-light py-3" for="btnradio3">$100</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -441,124 +531,84 @@
                 </div>
             </div>
         </div>
-    </div> -->
-    <!-- Donate End -->
+    </section>
+    <!-- Donate Section End -->
 
 
-    <!-- Team Start -->
-<!--     <div class="container-xxl py-5">
+    <!-- Contact Section Start -->
+    <section id="contact" class="container-xxl page-section">
         <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Team Members</div>
-                <h1 class="display-6 mb-5">Let's Meet With Our Ordinary Soldiers</h1>
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Contact Us</div>
+                    <h1 class="display-6 mb-5">If You Have Any Query, Please Contact Us</h1>
+                    <p class="mb-4">Get in touch with us! Send us a message and we'll respond as soon as possible.</p>
+                    
+                    <!-- Success/Error Messages -->
+                    <div id="success-message" class="alert alert-success d-none" role="alert">
+                        <i class="fa fa-check-circle me-2"></i>Thank you! Your message has been sent successfully. We'll get back to you soon.
             </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
+                    <div id="error-message" class="alert alert-danger d-none" role="alert">
+                        <i class="fa fa-exclamation-circle me-2"></i>Sorry, there was an error sending your message. Please try again or email us directly.
+                    </div>
+                    
+                    <form id="contact-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="from_name" name="from_name" placeholder="Your Name" required>
+                                    <label for="from_name">Your Name</label>
                         </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Full Name</h5>
-                            <p class="text-primary">Designation</p>
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
                             </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="from_email" name="from_email" placeholder="Your Email" required>
+                                    <label for="from_email">Your Email</label>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                                    <label for="subject">Subject</label>
                         </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Full Name</h5>
-                            <p class="text-primary">Designation</p>
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
                             </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 100px" required></textarea>
+                                    <label for="message">Message</label>
                         </div>
                     </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary py-2 px-3 me-3" id="submit-btn">
+                                    <span id="btn-text">Send Message</span>
+                                    <span id="btn-loading" class="d-none">
+                                        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                                        Sending...
+                                    </span>
+                                    <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                                        <i class="fa fa-arrow-right"></i>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Full Name</h5>
-                            <p class="text-primary">Designation</p>
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                </button>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Full Name</h5>
-                            <p class="text-primary">Designation</p>
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 450px;">
+                    <div class="position-relative rounded overflow-hidden h-100">
+                        <iframe 
+                          class="w-100 h-100"
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.8025986268836!2d-121.98857182401212!3d37.548269379802456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb0cb06f73a81%3A0xe3c4a6dd35a69a8b!2sFremont%2C%20CA!5e0!3m2!1sen!2sus!4v1735583920375!5m2!1sen!2sus" 
+                          style="min-height:400px; border:0;" 
+                          allowfullscreen="" 
+                          loading="lazy" 
+                          referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
                 </div>
             </div>
         </div>
-    </div> -->
-    <!-- Team End -->
-
-
-    <!-- Testimonial Start -->
-<!--     <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Testimonial</div>
-                <h1 class="display-6 mb-5">Trusted By Thousands Of People And Nonprofits</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/testimonial-1.jpg" style="width: 100px; height: 100px;">
-                    <div class="testimonial-text rounded text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Doner Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/testimonial-2.jpg" style="width: 100px; height: 100px;">
-                    <div class="testimonial-text rounded text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Doner Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/testimonial-3.jpg" style="width: 100px; height: 100px;">
-                    <div class="testimonial-text rounded text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Doner Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Testimonial End -->
+    </section>
+    <!-- Contact Section End -->
 
 
     <!-- Footer Start -->
@@ -581,26 +631,15 @@
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Address</h5>
                     <p><i class="fa fa-map-marker-alt me-3"></i>Fremont, California, USA</p>
-<!--                     <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p> -->
                     <p><i class="fa fa-envelope me-3"></i>info@fusionstem-foundation.org</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
-                    <!-- <a class="btn btn-link" href="">Contact Us</a> -->
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
+                    <a class="btn btn-link" href="#about">About Us</a>
+                    <a class="btn btn-link" href="#contact">Contact Us</a>
+                    <a class="btn btn-link" href="#services">Our Services</a>
+                    <a class="btn btn-link" href="#donate">Donate</a>
                 </div>
-<!--                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Newsletter</h5>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div> -->
             </div>
         </div>
         <div class="container-fluid copyright">
@@ -610,8 +649,7 @@
                         &copy; <a href="#">FusionSTEM Foundation</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-<!--                         Designed By <a href="https://htmlcodex.com">HTML Codex</a> -->
+                        <!--/*** This template is free as long as you keep the footer author's credit link/attribution link/backlink. If you'd like to use the template without the footer author's credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                     </div>
                 </div>
             </div>
@@ -633,8 +671,124 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/parallax/parallax.min.js"></script>
 
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- Single Page Navigation and EmailJS Script -->
+    <script>
+        // Initialize EmailJS with your public key
+        (function() {
+            emailjs.init("VzlpHD2wwgOBDvjrm");
+        })();
+
+        // Smooth scrolling and active navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle navigation clicks
+            const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+            const sections = document.querySelectorAll('section[id]');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Update active nav link
+                        navLinks.forEach(nav => nav.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                });
+            });
+            
+            // Update active nav link on scroll
+            window.addEventListener('scroll', function() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // Handle contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Get form elements
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+            const btnLoading = document.getElementById('btn-loading');
+            const successMessage = document.getElementById('success-message');
+            const errorMessage = document.getElementById('error-message');
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            btnText.classList.add('d-none');
+            btnLoading.classList.remove('d-none');
+            
+            // Hide previous messages
+            successMessage.classList.add('d-none');
+            errorMessage.classList.add('d-none');
+            
+            // Get form data
+            const formData = {
+                from_name: document.getElementById('from_name').value,
+                from_email: document.getElementById('from_email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                to_email: 'info@fusionstem-foundation.org'
+            };
+            
+            // Send email using EmailJS
+            emailjs.send('service_u5yub0k', 'template_wb9r0jk', formData)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    
+                    // Show success message
+                    successMessage.classList.remove('d-none');
+                    
+                    // Reset form
+                    document.getElementById('contact-form').reset();
+                    
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    
+                    // Show error message
+                    errorMessage.classList.remove('d-none');
+                    
+                    // Scroll to error message
+                    errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                })
+                .finally(function() {
+                    // Reset button state
+                    submitBtn.disabled = false;
+                    btnText.classList.remove('d-none');
+                    btnLoading.classList.add('d-none');
+                });
+        });
+    </script>
 </body>
 
 </html>
